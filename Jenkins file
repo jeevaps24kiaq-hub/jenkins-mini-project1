@@ -1,0 +1,30 @@
+pipeline {
+agent any
+
+stages {
+
+stage('Checkout') {
+steps {
+checkout scm
+}
+}
+
+stage('Build') {
+steps {
+echo 'Building Hello World application'
+}
+}
+
+stage('Test') {
+steps {
+echo 'Testing Hello World application'
+}
+}
+
+stage('Hello World') {
+steps {
+echo 'Hello World from Jenkins Pipeline!'
+}
+}
+}
+}
